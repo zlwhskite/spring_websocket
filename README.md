@@ -1,2 +1,16 @@
 # spring_websocket
-- 웹소켓 -> ws 프로토콜을 기반으로 클라이언트와 서버 사이에 지속적인 완전 양방향 연결 스트림을 만들어 주는 기술
+- 웹소켓 공부
+
+
+## WebSocketConfigurer
+~~~
+@Override
+public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+  registry.addHandler(핸들러, "웹소켓시작주소").setAllowedOrigins("*"); //CORS처리
+}
+~~~
+
+## TextWebSocketHandler
+- public void afterConnectionEstablished(WebSocketSession session) throws Exception -> 웹소켓 생성될 때 호출됨
+- public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception -> 웹소켓이 종료될 때 호출됨
+- protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception -> 로직구현하기
