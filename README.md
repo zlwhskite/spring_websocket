@@ -14,3 +14,7 @@ public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 - public void afterConnectionEstablished(WebSocketSession session) throws Exception -> 웹소켓 생성될 때 호출됨
 - public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception -> 웹소켓이 종료될 때 호출됨
 - protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception -> 로직구현하기
+
+
+
+참고블로그 https://lts0606.tistory.com/569
